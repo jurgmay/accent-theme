@@ -1,21 +1,19 @@
 <div>
     <img class="fileInput">
     <loadingindicator ng-show="uploadFileIndicator" title="{{'Uploading' | r | xlat}}"/>
-    <label>{{label || customfield.Label || customfield.Name | r}}:</label>
+     <label>{{customfield.Label | r}}</label>
     <img ng-show="customfield.File.IsImage && customfield.FileType == 'Image'" ng-src="{{customfield.File.Url}}"></img>
     <a ng-href="{{customfield.File.Url}}">{{customfield.File.OriginalName}}</a>
     <div ng-show="customfield.File">
         <input name="replace" class="replace" type="checkbox" ng-model="replace"></input> {{'Replace' | r | xlat}}
         <input name="delete" class="delete" type="checkbox"></input> {{'Delete' | r | xlat}}
     </div>
-    <div ng-show="replace || !customfield.File" ng-class="{'file-upload-required text-danger': customfield.Required }" class="btn btn-default">
-        <i class="fa fa-upload"></i> {{'Upload File' | r | xlat}}
+    <div ng-show="replace || !customfield.File" ng-class="{'file-upload-required text-danger': customfield.Required }" class="btn btn-default mt-0 mb-10">
         <input name="upload" class="upload" type="file"></input>
     </div>
-    <hr />
     <input type="hidden" ng-required="customfield.Required" ng-model="customfield.File.ID"></input>
     <div class="error ui-state-error-text text-danger"></div>
-    <div class="alert alert-info" ng-show="replace || !customfield.File">
+    <div class="alert alert-info mt-0 mb-10 p-10" ng-show="replace || !customfield.File">
         {{customfield.UploadInstructions}}
         <ul ng-show="replace || !customfield.File">
             <li>{{'Allowed File Types' | r | xlat}}: {{customfield.AllowedExt | r}}</li>

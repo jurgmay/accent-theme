@@ -1,11 +1,12 @@
 <div class="row">
     <div class="col-sm-12 view-form-icon">
-        <div class="input-group">
-            <label>{{'Name' | r | xlat}}</label>
-            <input required class="form-control" type="text" ng-model="report.Name" placeholder="{{'Name' | r | xlat}}" />
-            <i class="fa fa-bookmark-o"></i>
-            <div class="input-group-btn">
-                <button type="submit" ng-disabled="reportForm.$invalid" class="btn btn-primary pull-right">
+        <div>
+            <div>
+                <label>{{'Name' | r | xlat}}</label>
+                <input required class="form-control" type="text" ng-model="report.Name" placeholder="{{'Name' | r | xlat}}" />
+            </div>
+            <div>
+                <button type="submit" ng-disabled="reportForm.$invalid" class="btn btn-primary">
                     <span>{{'Save' | r | xlat}}</span>
                     <i class="fa fa-save"></i>
                 </button>

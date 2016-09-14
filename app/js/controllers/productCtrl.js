@@ -28,12 +28,50 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 		if (lineitem.PriceSchedule && lineitem.PriceSchedule.DefaultQuantity != 0)
 			$scope.LineItem.Quantity = lineitem.PriceSchedule.DefaultQuantity;
 	}
+	
+	/*social*/
+	$scope.encodeComponent = function(value) {
+		return encodeURIComponent(value);
+	};
+	/*social*/
+		
 	function init(searchTerm, callback) {
 		ProductDisplayService.getProductAndVariant($routeParams.productInteropID, $routeParams.variantInteropID, function (data) {
 			$scope.LineItem.Product = data.product;
 			$scope.LineItem.Variant = data.variant;
 			ProductDisplayService.setNewLineItemScope($scope);
 			ProductDisplayService.setProductViewScope($scope);
+			
+			/*social*/
+			$scope.LineItem.ShareName = $scope.LineItem.Product.Name.replace(/&/g, "and");
+			$scope.tumblr_link_url = $location.absUrl();
+			$scope.tumblr_link_name = $scope.LineItem.ShareName;
+			$scope.tumblr_link_description = "Check out the " + $scope.tumblr_link_name + " on the COBC Site!";
+			$scope.twitter_link_description = "Check out the " + $scope.tumblr_link_name + " on the COBC Site!";
+
+			$scope.shareFB = function(post){
+				FB.ui(
+					{
+						method: 'share',
+						picture: $scope.LineItem.Variant.PreviewUrl,
+                        href: $scope.LineItem.Variant.PreviewUrl
+					});
+			}
+			
+			$scope.feedFB = function(post){
+				FB.ui(
+					{
+						method: 'feed',
+						name: $scope.LineItem.ShareName,
+						link: 'https://accent.four51ordercloud.com/cobc/product/' + $scope.LineItem.Product.InteropID,
+						picture: $scope.LineItem.Variant.PreviewUrl,
+						caption: '',
+						description: '',
+						message: ''
+					});
+			}
+			/*social*/
+			
 			setDefaultQty($scope.LineItem);
 			$scope.$broadcast('ProductGetComplete');
 			$scope.loadingIndicator = false;
@@ -107,8 +145,6 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 					});
 				},
 				function(ex) {
-					//remove the last LineItem added to the cart.
-					$scope.currentOrder.LineItems.pop();
 					$scope.addToOrderIndicator = false;
 					$scope.lineItemErrors.push(ex.Detail);
 					$scope.showAddToCartErrors = true;

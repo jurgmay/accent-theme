@@ -35,7 +35,6 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 		$scope.currentCategory ={SubCategories:$scope.tree};
 	}
 
-
 	$scope.$on("treeComplete", function(data){
 		if (!$routeParams.categoryInteropID) {
 			$scope.currentCategory ={SubCategories:$scope.tree};
@@ -52,4 +51,5 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 			$scope.sorter = s.replace(' DESC', "");
 		$scope.direction = s.indexOf('DESC') > -1;
 	});
+	
 }]);
