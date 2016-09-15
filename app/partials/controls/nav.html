@@ -83,12 +83,12 @@
 													</li>
 													<li id="451qa_addy_link" ng-show="user.Type == 'Customer' && (user.Permissions.contains('CreateShipToAddress') || user.Permissions.contains('CreateBillToAddress'))" class="addresses">
 														<a href="addresses">
-															{{'Addresses' | r | xlat}}
+															{{'My ' + 'Addresses' | r | xlat}}
 														</a>
 													</li>
 													<li id="451qa_mesg_link" ng-show="user.Type == 'Customer' && user.Permissions.contains('ViewMessaging')" class="messages">
 														<a href="message">
-															{{'Messages' | r | xlat}}
+															{{'My ' + 'Messages' | r | xlat}}
 														</a>
 													</li>
 													<li class="favorites" ng-show="user.Type == 'Customer'">
@@ -96,14 +96,16 @@
 															{{'Favorites' | r | xlat}}
 														</a>
 													</li>
-													<li id="451qa_mesg_link" ng-show="user.Permissions.contains('ViewContactUs')" class="contactus">
-														<a href="contactus">
-															{{'Contact Us' | r | xlat}}
-														</a>
-													</li>
+													<li class="divider" ng-show="user.Type!='TempCustomer' || AppConst.debug"></li>
 													<li>
 														<a href="#" neworder ng-if="user.Permissions.contains('MultipleShoppingCart') && currentOrder" class="neworder" ng-click="newOrderLoadingIndicator = true;startNewOrder()">
 															{{"Start" | r | xlat}} {{"New" | r | xlat}} {{"Order" | r | xlat}}
+														</a>
+													</li>
+													<li class="divider" ng-show="user.Type!='TempCustomer' || AppConst.debug"></li>
+													<li id="451qa_mesg_link" ng-show="user.Permissions.contains('ViewContactUs')" class="contactus">
+														<a href="contactus">
+															{{'Contact Us' | r | xlat}}
 														</a>
 													</li>
 													<li class="divider" ng-show="user.Type!='TempCustomer' || AppConst.debug"></li>
