@@ -3,6 +3,7 @@ four51.app.factory('WhiteLabel', function() {
 		{"key":"Cart","value":"Basket"},
 		{"key":"Cart Summary","value":"Basket Summary"},
 		{"key":"Cart Type","value":"Basket Type"},
+		{"key":"Cost Center","value":"Cost Centre"},
 		{"key":"Tax","value":"VAT"},
 		{"key":"User Information","value":"My Details"},
 		{"key":"Favorites","value":"My Favourites"},
