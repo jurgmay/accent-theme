@@ -1,12 +1,12 @@
 <div class="panel panel-default panel-order">
     <div class="panel-heading" ng-class="{'no': cart_order.$invalid, 'yes': !cart_order.$invalid, 'open': checkOutSection == 'order' }">
-        <h3 ng-click="checkOutSection = 'order'" class="panel-title panel-primary">
+        <h3 class="panel-title panel-primary">
             <i class="pull-left" ng-class="{'fa fa-warning': cart_order.$invalid, 'fa fa-check-circle': !cart_order.$invalid }"></i>
             {{'Order' | r | xlat}}
             <i class="pull-right" ng-class="{'fa fa-caret-up': checkOutSection == 'order', 'fa fa-caret-down': checkOutSection == 'shipping' || checkOutSection == 'billing' }"></i>
         </h3>
     </div>
-    <div collapse="checkOutSection != 'order'" class="panel-body">
+    <div class="panel-body">
         <form name="cart_order" novalidate="">
             <div class="view-form-icon" ng-if="user.Permissions.contains('EditPOID')" ng-invalid>
                 <div class="col-xs-12 input-group">
