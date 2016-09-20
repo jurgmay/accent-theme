@@ -3,7 +3,6 @@
         <h3 class="panel-title">
             <i class="pull-left" ng-class="{'fa fa-warning': cart_billing.$invalid, 'fa fa-check-circle': !cart_billing.$invalid }"></i>
             {{'Billing' | r | xlat}}
-            <i class="pull-right" ng-class="{'fa fa-caret-up': checkOutSection == 'billing', 'fa fa-caret-down': checkOutSection == 'shipping' || checkOutSection == 'order' }"></i>
         </h3>
     </div>
     <div collapse="checkOutSection != 'billing'" class="panel-body">
