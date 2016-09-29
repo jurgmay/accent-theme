@@ -2,7 +2,7 @@
     <div class="panel-heading">
         <h3 class="panel-title panel-primary">
             <i class="pull-left" ng-class="{'fa fa-warning': cart_shipping.$invalid, 'fa fa-check-circle': !cart_shipping.$invalid }"></i>
-            {{'Shipping' | r | xlat}}
+            {{('Shipping' | r) + ' Details' | xlat}}
         </h3>
     </div>
     <div class="panel-body pv-0">
@@ -45,7 +45,6 @@
                                                 ng-required="!currentOrder.IsMultipleShip()">
                                             <option value=""></option>
                                         </select>
-                                        <!-- <i class="fa fa-map-marker"></i> -->
                                 </div>
                                 <div ng-show="user.ShipMethod != null && shippers" ng-class="{'view-form-select': !currentOrder.LineItems[0].ShipperName, '': currentOrder.LineItems[0].ShipperName }">
                                     <label ng-class="{required: !currentOrder.IsMultipleShip() && user.ShipMethod != null}" ng-show="currentOrder.LineItems[0].ShipperName || !currentOrder.IsMultipleShip() && user.ShipMethod != null">{{('Shipping' | r) + ' Method' | xlat}}</label>
@@ -126,7 +125,6 @@
                                                 ng-change="setShipAddressAtLineItem(item)">
                                             <option value=""></option>
                                         </select>
-                                        <!-- <i class="fa fa-map-marker"></i> -->
                                     </div>
                                 </div>
                                 <div class="view-form-icon" ng-show="item.ShipAddressID || currentOrder.IsMultipleShip() && item.ShipAddressID && user.ShipMethod != null">
