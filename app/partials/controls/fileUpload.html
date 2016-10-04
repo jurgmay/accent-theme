@@ -17,8 +17,8 @@
         {{customfield.UploadInstructions}}
         <ul ng-show="replace || !customfield.File">
             <li>{{'Allowed File Types' | r | xlat}}: {{customfield.AllowedExt | r}}</li>
-            <li ng-if="customfield.MinSize > 0">{{'Minimum File Size' | r | xlat}}: {{(customfield.MinSize | mb) + ' MB'}}</li>
-            <li ng-if="customfield.MaxSize > 0">{{'Maximum File Size' | r | xlat}}: {{(customfield.MaxSize | mb) + ' MB'}}</li>
+            <li ng-if="customfield.MinSize > 0">{{'Minimum File Size' | r | xlat}}: {{(customfield.MinSize | kb) + ' kb'}}</li>
+            <li ng-if="customfield.MaxSize > 0">{{'Maximum File Size' | r | xlat}}: {{(customfield.MaxSize | kb) + ' kb'}}</li>
             <li ng-if="customfield.MinHeight > 0 && (customfield.File.IsImage || customfield.FileType == 'Image')">{{'Minimum Height' | xlat}}: {{customfield.MinHeight + ' px'}}</li>
             <li ng-if="customfield.MaxHeight > 0 && (customfield.File.IsImage || customfield.FileType == 'Image')">{{'Maximum Height' | xlat}}: {{customfield.MaxHeight + ' px'}}</li>
             <li ng-if="customfield.MinWidth > 0 && (customfield.File.IsImage || customfield.FileType == 'Image')">{{'Minimum Width' | xlat}}: {{customfield.MinWidth + ' px'}}</li>
