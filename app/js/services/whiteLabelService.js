@@ -1,9 +1,9 @@
 four51.app.factory('WhiteLabel', function() {
 	var replacements = [
 		{"key":"Canceled","value":"Cancelled"},
-		{"key":"Cart","value":"Basket"},
-		{"key":"Cart Summary","value":"Basket Summary"},
-		{"key":"Cart Type","value":"Basket Type"},
+		{"key":"Cart","value":"Order"},
+		{"key":"Cart Summary","value":"Order Summary"},
+		{"key":"Cart Type","value":"Order Type"},
 		{"key":"Center","value":"Centre"},
 		{"key":"Favorite","value":"Favourite"},
 		{"key":"Favorites","value":"My Favourites"},
