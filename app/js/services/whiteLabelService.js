@@ -1,5 +1,6 @@
 four51.app.factory('WhiteLabel', function() {
 	var replacements = [
+		{"key":"addToOrderText","value":"Add To Order"},
 		{"key":"Canceled","value":"Cancelled"},
 		{"key":"Cart","value":"Order"},
 		{"key":"Cart Summary","value":"Order Summary"},
