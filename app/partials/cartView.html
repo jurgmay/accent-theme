@@ -120,20 +120,20 @@
 											<div class="col-sm-9">
 												<div ng-if="currentOrder.Status != 'AwaitingApproval' || isEditforApproval">
 													<a class="line-item-link" ng-href="{{(item.Product.Type == 'Kit' ? 'kit' : 'cart') + '/' + (item.Product.InteropID) + '/' + (isEditforApproval ? (currentOrder.ID + '/') : '') + ($index)}}">
-														<p class="mb-0">
+														<p class="mb-0 mt-5">
 															 <i ng-show="item.KitIsInvalid" class="fa fa-exclamation-triangle"></i>
 															 {{item.Product.Name}}
 														</p>
 													</a>
-													<p class="mb-0">
+													<p class="mb-0 mt-5">
 														<small>{{item.Specs['Upload A File'].File.OriginalName}}</small>
 													</p>
 												</div>
 												<div ng-if="currentOrder.Status == 'AwaitingApproval' && !isEditforApproval">
-													<p class="mb-0">
+													<p class="mb-0 mt-5">
 														{{item.Product.Name}}
 													</p><br />
-													<p class="mb-0">
+													<p class="mb-0 mt-5">
 														<small>{{item.Specs['Upload A File'].File.OriginalName}}</small>
 													</p>
 												</div>
@@ -234,7 +234,7 @@
 
 									<!-- unit price -->
 									<!-- ========== -->
-									<div class="col-sm-1" ng-if="!(user.Permissions.contains('HidePricing'))">
+									<div class="col-sm-1 mt-5" ng-if="!(user.Permissions.contains('HidePricing'))">
 										<p>
 											{{item.UnitPrice | culturecurrency}}
 										</p>
@@ -261,7 +261,7 @@
 									<!-- line total -->
 									<!-- ========== -->
 									<div class="col-sm-1">
-										<div class="pr-10" ng-if="!(user.Permissions.contains('HidePricing'))">
+										<div class="pr-10 mt-5" ng-if="!(user.Permissions.contains('HidePricing'))">
 											<p class="text-right">
 												{{item.LineTotal | culturecurrency}}
 											</p>
