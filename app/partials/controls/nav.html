@@ -140,7 +140,9 @@
                                                             	<div class="pt-10">
                                                                    	<div class="row ph-10 mb-10" ng-repeat="item in currentOrder.LineItems">
                                                                 		<div class="col-md-3">
-                                                                			<img style="max-height: 70px;" ng-src="{{item.Variant.PreviewUrl || item.Variant.SmallImageUrl || item.Product.SmallImageUrl}}" />
+																			<a class="line-item-link" ng-href="{{(item.Product.Type == 'Kit' ? 'kit' : 'cart') + '/' + (item.Product.InteropID) + '/' + (isEditforApproval ? (currentOrder.ID + '/') : '') + ($index)}}">
+																				<img style="max-height: 70px;" ng-src="{{item.Variant.PreviewUrl || item.Variant.SmallImageUrl || item.Product.SmallImageUrl}}" />
+																			</a>
                                                                 		</div>
                                                                 		<div class="col-md-5 text-left">
                                                                 			<a ng-href="{{(item.Product.Type == 'Kit' ? 'kit' : 'cart') + '/' + (item.Product.InteropID) + '/' + (isEditforApproval ? (currentOrder.ID + '/') : '') + ($index)}}">{{item.Product.Name}}</a>
