@@ -70,7 +70,7 @@
 										</div>
 									</div>
 
-									<div class="col-sm-1" ng-if="!(user.Permissions.contains('HidePricing'))">
+									<div class="col-sm-1 text-right" ng-if="!(user.Permissions.contains('HidePricing'))">
 										Unit Price
 									</div>
 
@@ -83,7 +83,7 @@
 									</div>
 			
 									<div class="col-sm-1">
-										<div class="pr-10" ng-if="!(user.Permissions.contains('HidePricing'))">
+										<div class="pr-10 text-right" ng-if="!(user.Permissions.contains('HidePricing'))">
 											Total	
 										</div>
 									</div>
@@ -235,7 +235,7 @@
 									<!-- unit price -->
 									<!-- ========== -->
 									<div class="col-sm-1 mt-5" ng-if="!(user.Permissions.contains('HidePricing'))">
-										<p>
+										<p class="text-right">
 											{{item.UnitPrice | culturecurrency}}
 										</p>
 									</div>
