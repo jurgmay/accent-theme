@@ -109,10 +109,12 @@
 											<!-- ========= -->
 											<div class="col-sm-3 pl-25">
 												<figure>
-													<img ng-src="{{item.Variant.LargeImageUrl || item.Product.SmallImageUrl}}" />
+													<a class="line-item-link" ng-href="{{(item.Product.Type == 'Kit' ? 'kit' : 'cart') + '/' + (item.Product.InteropID) + '/' + (isEditforApproval ? (currentOrder.ID + '/') : '') + ($index)}}">
+														<img ng-src="{{item.Variant.PreviewUrl || item.Variant.SmallImageUrl || item.Product.SmallImageUrl}}" />
+													</a>
 												</figure>
 											</div>
-
+											
 											<!-- product description -->
 											<!-- =================== -->
 											<div class="col-sm-9">
