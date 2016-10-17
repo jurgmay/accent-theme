@@ -1,5 +1,7 @@
 four51.app.factory('Resources', function() {
-    var countries = [
+    var _dropKey = "YNc05lVbvlAAAAAAAAAADUW5TRULsnhuSqrZsQiOKsDIgu6RpHncoT0VrB0l1ld4";
+	
+	var countries = [
         { "label": "United States of America", "value": "US"},
         { "label": "Afghanistan", "value": "AF"},
         { "label": "Åland Islands", "value": "AX"},
@@ -337,6 +339,7 @@ four51.app.factory('Resources', function() {
     ];
 
     return {
+		dropKey: _dropKey,
         countries:  countries,
         states: states
     };
