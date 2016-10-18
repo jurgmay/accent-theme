@@ -6,6 +6,26 @@
                     <h2 class="animated fadeIn text-center"><br />{{'Accent' | r}}</h2>
                     <p id="451qa_msg_login" ng-show="loginMessage" ng-bind-html="loginMessage" class="alert alert-info"></p>
                     <div>
+					
+
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-4 view-form-icon">
+									<div class="form-group has-feedback">
+										<label for="inputName" class="control-label">{{'Order ID' | r | xlat}}</label>
+										<input type="text" class="form-control" ng-model="criteria.OrderID" placeholder="{{('Order' | r) + ' ' + ('ID' | r) | xlat}}" autocomplete="off">
+										<i class="fa fa-pencil form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label for="inputName" class="control-label">{{('Ship' | r) + ' ' + ('Address' | r) | xlat}}</label>
+										<input type="text" class="form-control" ng-model="criteria.ShippingAddress" placeholder="{{('Shipping' | r) + ' ' + ('Address' | r) | xlat}}" autocomplete="off">
+										<i class="fa fa-map-marker form-control-feedback"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					
                         <div class="view-form-icon" ng-show="!showEmailHelp && !PasswordReset">
                             <div>
                                 <label ng-show="credentials.Username">{{'Username' | r}}</label>
