@@ -34,12 +34,10 @@
 													<div class="form-group has-feedback">
 														<label ng-show="credentials.Username">{{'Username' | r}}</label>
 														<input autofocus class="form-control" type="text" ng-model="credentials.Username" placeholder="{{'Username' | r}}" />
-														<i class="fa fa-user"></i>
 													</div>
 													<div class="form-group has-feedback">
 														<label ng-show="credentials.Password">{{'Password' | r}}</label>
 														<input class="form-control" type="password" ng-model="credentials.Password" placeholder="{{'Password' | r}}" />
-														<i class="fa fa-lock"></i>
 													</div>
 												</div>
 											</div>
@@ -71,17 +69,14 @@
 												<div>
 													<label ng-show="credentials.CurrentPassword">Current {{'Password' | r}}</label>
 													<input class="form-control" name="current_password" type="password" ng-model="credentials.CurrentPassword" placeholder="Current {{'Password' | r}}" />
-													<i class="fa fa-lock"></i>
 												</div>
 												<div>
 													<label ng-show="credentials.NewPassword">New {{'Password' | r}}</label>
 													<input class="form-control" name="new_password" type="password" ng-model="credentials.NewPassword" placeholder="New {{'Password' | r}}" />
-													<i class="fa fa-lock"></i>
 												</div>
 												<div>
 													<label ng-show="credentials.ConfirmPassword">Confirm {{'Password' | r}}</label>
 													<input class="form-control" name="confirm_password" type="password" ng-model="credentials.ConfirmPassword"  placeholder="Confirm {{'Password' | r}}" ng-match="credentials.NewPassword" />
-													<i class="fa fa-lock"></i>
 													<inlineerror ng-show="login_form.confirm_password.$error.match" title="{{'Password' | r}} do not match!" />
 												</div>
 											</div>
@@ -92,12 +87,10 @@
 												<div>
 													<label ng-show="credentials.NewPassword">New {{'Password' | r}}</label>
 													<input class="form-control" ng-required="PasswordReset" name="new_password" type="password" ng-model="credentials.NewPassword" placeholder="New {{'Password' | r}}" />
-													<i class="fa fa-lock"></i>
 												</div>
 												<div>
 													<label ng-show="credentials.ConfirmPassword">Confirm {{'Password' | r}}</label>
 													<input class="form-control" ng-required="PasswordReset" name="confirm_password" type="password" ng-model="credentials.ConfirmPassword"  placeholder="Confirm {{'Password' | r}}" ng-match="credentials.NewPassword" />
-													<i class="fa fa-lock"></i>
 													<inlineerror ng-show="login_form.confirm_password.$error.match" title="{{'Password' | r}} do not match!" />
 												</div>
 											</div>
@@ -106,50 +99,7 @@
 							</div>
 						</div>
 
-						<div class="form" role="form">
-							<div class="panel-body">
-								<div class="row">
-									<div class="col-sm-4 view-form-icon">
-										<div class="form-group has-feedback">
-											<label ng-show="credentials.Username" class="control-label">{{'Username' | r}}</label>
-											<input type="text" class="form-control" ng-model="credentials.Username" placeholder="{{'Username' | r}}">
-											<i class="fa fa-pencil form-control-feedback"></i>
-										</div>
-										<div class="form-group has-feedback">
-											<label ng-show="credentials.Password" class="control-label">{{('Ship' | r) + ' ' + ('Address' | r) | xlat}}</label>
-											<input type="text" class="form-control" ng-model="credentials.Password" placeholder="{{'Password' | r}}">
-											<i class="fa fa-map-marker form-control-feedback"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-4 view-form-icon">
-													<div class="form-group has-feedback">
-														<label class="control-label" ng-show="credentials.Username">{{'Username' | r}}</label>
-														<input autofocus class="form-control" type="text" ng-model="credentials.Username" placeholder="{{'Username' | r}}" />
-														<i class="fa fa-user form-control-feedback"></i>
-													</div>
-													<div class="form-group has-feedback">
-														<label class="control-label" ng-show="credentials.Password">{{'Password' | r}}</label>
-														<input class="form-control" type="password" ng-model="credentials.Password" placeholder="{{'Password' | r}}" />
-														<i class="fa fa-lock form-control-feedback"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-										
-										
-										
 
-										
-										
-										
-						
 					</div>
 				</div>
 			</div>
