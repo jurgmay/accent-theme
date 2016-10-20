@@ -1,10 +1,10 @@
 <div id="address_edit">
-	<div class="form-group">
+	<div class="form-group mt-20">
 		<div class="view-form-icon" ng-hide="address.IsCustEditable == false">
 			<div>
 				<label for="Autocomplete">{{'Quick Address' | r | xlat}}</label>
 				<input type="text" id="Autocomplete" class="form-control" details="addressobj" placeholder="{{'Enter a location' | r | xlat}}" ng-autocomplete ng-model="addressresult"/>
-				<i class="fa fa-map-marker"></i>
+				<!-- <i class="fa fa-map-marker"></i> -->
 			</div>
 		</div>
 	</div>
@@ -83,7 +83,6 @@
 				</div>
             </div>
         </div>
-        <hr />
         <div class="row create-address-type">
             <div class="checkbox">
                 <label ng-show="user.Permissions.contains('CreateShipToAddress')">
