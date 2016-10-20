@@ -105,106 +105,106 @@
 								</div>
 							</form>
 						</div>
-							<form class="form-horizontal" role="form" ng-show="user.Permissions.contains('ViewSelfAdmin')" name="user_form" ng-submit="save()">
-								<div class="panel panel-default" id="user_form">
-									<div class="panel-heading">
-										<h3 class="panel-title">{{(user.Type == 'TempCustomer' ? 'Create' : 'Details')}}</h3>
+						<form class="form-horizontal" role="form" ng-show="user.Permissions.contains('ViewSelfAdmin')" name="user_form" ng-submit="save()">
+							<div class="panel panel-default" id="user_form">
+								<div class="panel-heading">
+									<h3 class="panel-title">{{(user.Type == 'TempCustomer' ? 'Create' : 'Details')}}</h3>
+								</div>
+								<div class="panel-body">
+									<div class="col-sm-6 view-form-icon">
+										<form class="form-horizontal" role="form">
+											<div class="form-group has-feedback">
+												<label for="inputName" class="col-sm-3 control-label">{{('First' | r) + ' ' + ('Name' | r) | xlat}}</label>
+												<div class="col-sm-8">
+													<input name="firstname" type="text" class="form-control" id="inputName" required ng-model="user.FirstName" placeholder="{{('First' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" >
+													<i class="fa fa-pencil form-control-feedback"></i>
+												</div>
+											</div>
+											<div class="form-group has-feedback">
+												<label for="inputName" class="col-sm-3 control-label">{{('Last' | r) + ' ' + ('Name' | r) | xlat}}</label>
+												<div class="col-sm-8">
+													<input name="lastname" type="text" class="form-control" id="inputName" required ng-model="user.LastName" placeholder="{{('Last' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" >
+													<i class="fa fa-pencil form-control-feedback"></i>
+												</div>
+											</div>
+											<div class="form-group has-feedback">
+												<label for="inputName" class="col-sm-3 control-label">{{'Phone' | r | xlat}}</label>
+												<div class="col-sm-8">
+													<input name="lastname" type="text" class="form-control" id="inputName" required ng-model="user.Phone" placeholder="{{('Telephone' | r) | xlat}}" autocomplete="off" >
+													<i class="fa fa-phone form-control-feedback"></i>
+												</div>
+											</div>
+											<div class="form-group has-feedback">
+												<label for="inputName" class="col-sm-3 control-label">{{'Email' | r | xlat}}</label>
+												<div class="col-sm-8">
+													<input name="email" type="text" class="form-control" id="inputName" required ng-model="user.Email" placeholder="{{('Email' | r) | xlat}}" autocomplete="off" >
+													<i class="fa fa-envelope form-control-feedback"></i>
+												</div>
+											</div>
+											<inlineerror ng-show="user_form.email.$invalid" title="{{'Please enter a valid' + ' ' +  ('Email' | rl) + ' ' + ('Address' | rl) | xlat}}" />
+										</form>
 									</div>
-									<div class="panel-body">
-										<div class="col-sm-6 view-form-icon">
-											<form class="form-horizontal" role="form">
-												<div class="form-group has-feedback">
-													<label for="inputName" class="col-sm-3 control-label">{{('First' | r) + ' ' + ('Name' | r) | xlat}}</label>
-													<div class="col-sm-8">
-														<input name="firstname" type="text" class="form-control" id="inputName" required ng-model="user.FirstName" placeholder="{{('First' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" >
-														<i class="fa fa-pencil form-control-feedback"></i>
-													</div>
-												</div>
-												<div class="form-group has-feedback">
-													<label for="inputName" class="col-sm-3 control-label">{{('Last' | r) + ' ' + ('Name' | r) | xlat}}</label>
-													<div class="col-sm-8">
-														<input name="lastname" type="text" class="form-control" id="inputName" required ng-model="user.LastName" placeholder="{{('Last' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" >
-														<i class="fa fa-pencil form-control-feedback"></i>
-													</div>
-												</div>
-												<div class="form-group has-feedback">
-													<label for="inputName" class="col-sm-3 control-label">{{'Phone' | r | xlat}}</label>
-													<div class="col-sm-8">
-														<input name="lastname" type="text" class="form-control" id="inputName" required ng-model="user.Phone" placeholder="{{('Telephone' | r) | xlat}}" autocomplete="off" >
-														<i class="fa fa-phone form-control-feedback"></i>
-													</div>
-												</div>
-												<div class="form-group has-feedback">
-													<label for="inputName" class="col-sm-3 control-label">{{'Email' | r | xlat}}</label>
-													<div class="col-sm-8">
-														<input name="email" type="text" class="form-control" id="inputName" required ng-model="user.Email" placeholder="{{('Email' | r) | xlat}}" autocomplete="off" >
-														<i class="fa fa-envelope form-control-feedback"></i>
-													</div>
-												</div>
-												<inlineerror ng-show="user_form.email.$invalid" title="{{'Please enter a valid' + ' ' +  ('Email' | rl) + ' ' + ('Address' | rl) | xlat}}" />
-											</form>
+									<div class="col-sm-6 view-form-icon">
+										<div class="form-group has-feedback">
+											<label for="inputName" class="col-sm-4 control-label">{{'Username' | r | xlat}}</label>
+											<div class="col-sm-8">
+												<input name="username" type="text" class="form-control" id="inputName" required ng-model="user.TempUsername" placeholder="{{'Username' | r | xlat}}" autocomplete="off" >
+												<i class="fa fa-user form-control-feedback"></i>
+											</div>
 										</div>
-										<div class="col-sm-6 view-form-icon">
-											<div class="form-group has-feedback">
-												<label for="inputName" class="col-sm-4 control-label">{{'Username' | r | xlat}}</label>
-												<div class="col-sm-8">
-													<input name="username" type="text" class="form-control" id="inputName" required ng-model="user.TempUsername" placeholder="{{'Username' | r | xlat}}" autocomplete="off" >
-													<i class="fa fa-user form-control-feedback"></i>
-												</div>
+										<div class="form-group has-feedback">
+											<label for="inputName" class="col-sm-4 control-label">{{'Password' | r | xlat}}</label>
+											<div class="col-sm-8">
+												<input name="password" type="password" class="form-control" id="inputName" ng-required="user.Type == 'TempCustomer'" ng-model="user.Password" placeholder="{{'Password' | r | xlat}}" autocomplete="off" >
+												<i class="fa fa-lock form-control-feedback"></i>
 											</div>
-											<div class="form-group has-feedback">
-												<label for="inputName" class="col-sm-4 control-label">{{'Password' | r | xlat}}</label>
-												<div class="col-sm-8">
-													<input name="password" type="password" class="form-control" id="inputName" ng-required="user.Type == 'TempCustomer'" ng-model="user.Password" placeholder="{{'Password' | r | xlat}}" autocomplete="off" >
-													<i class="fa fa-lock form-control-feedback"></i>
-												</div>
+										</div>
+										<div class="form-group has-feedback">
+											<label for="inputName" class="col-sm-4 control-label">{{('Confirm' | r) + ' ' + ('Password' | r) | xlat}}</label>
+											<div class="col-sm-8">
+												<input name="confirm_password" type="password" class="form-control" ng-required="user.Type == 'TempCustomer' || user.Password" id="inputName" required ng-model="user.ConfirmPassword" placeholder="{{('Confirm' | r) + ' ' + ('Password' | r) | xlat}}" autocomplete="off" >
+												<i class="fa fa-lock form-control-feedback"></i>
 											</div>
-											<div class="form-group has-feedback">
-												<label for="inputName" class="col-sm-4 control-label">{{('Confirm' | r) + ' ' + ('Password' | r) | xlat}}</label>
-												<div class="col-sm-8">
-													<input name="confirm_password" type="password" class="form-control" ng-required="user.Type == 'TempCustomer' || user.Password" id="inputName" required ng-model="user.ConfirmPassword" placeholder="{{('Confirm' | r) + ' ' + ('Password' | r) | xlat}}" autocomplete="off" >
-													<i class="fa fa-lock form-control-feedback"></i>
-												</div>
-											</div>
-											<!--TODO username input shouldn't default to temporary usernames, if the user is temp, make the placeholder show instead !-->
-											<span class="alert-warning" ng-show="securityWarning">
+										</div>
+										<!--TODO username input shouldn't default to temporary usernames, if the user is temp, make the placeholder show instead !-->
+										<span class="alert-warning" ng-show="securityWarning">
+											<ul>
+												<li>{{'Your password does not meet the requirements set for length or complexity. It must be changed to meet the minimum requirements before continuing.' | xlat}}</li>
+												<li>{{'There are three distinct password security levels. The rules are defined as:' | xlat}}</li>
 												<ul>
-													<li>{{'Your password does not meet the requirements set for length or complexity. It must be changed to meet the minimum requirements before continuing.' | xlat}}</li>
-													<li>{{'There are three distinct password security levels. The rules are defined as:' | xlat}}</li>
+													<li>{{'Low: No restrictions on passwords.' | xlat}}</li>
+													<li>{{'Medium: A minimum of 6 characters required.' | xlat}}</li>
+													<li>{{'High:' | xlat}}</li>
 													<ul>
-														<li>{{'Low: No restrictions on passwords.' | xlat}}</li>
-														<li>{{'Medium: A minimum of 6 characters required.' | xlat}}</li>
-														<li>{{'High:' | xlat}}</li>
-														<ul>
-															<li>{{'Minimum of 8 alphanumeric characters.' | xlat}}</li>
-															<li>{{'Two or more of the following kinds of characters' | xlat}}</li>
-															<ol>
-																<li>{{'Alphabetic (e.g., a-z, A-Z)' | xlat}}</li>
-																<li>{{'Numeric (i.e. 0-9)' | xlat}}</li>
-																<li>{{'Punctuation and other characters (e.g.,' | xlat}} !@#$%^&*()_+|~-=\`{}[]:";'<>?,./)</li>
-															</ol>
-															<li>{{'** After 6 failed logon attempts, the user will be locked out for 30 minutes.' | xlat}}</li>
-														</ul>
+														<li>{{'Minimum of 8 alphanumeric characters.' | xlat}}</li>
+														<li>{{'Two or more of the following kinds of characters' | xlat}}</li>
+														<ol>
+															<li>{{'Alphabetic (e.g., a-z, A-Z)' | xlat}}</li>
+															<li>{{'Numeric (i.e. 0-9)' | xlat}}</li>
+															<li>{{'Punctuation and other characters (e.g.,' | xlat}} !@#$%^&*()_+|~-=\`{}[]:";'<>?,./)</li>
+														</ol>
+														<li>{{'** After 6 failed logon attempts, the user will be locked out for 30 minutes.' | xlat}}</li>
 													</ul>
 												</ul>
-											</span>
-										</div>
-									</div>
-									<div class="panel-body" >
-										<div ng-if="user.CustomFields" class="col-sm-6 view-form-icon">
-											<div ng-repeat="field in user.CustomFields">
-												<customfilefield customfield="field" ng-if="field.ControlType == 'File' && field.DisplayToUser"></customfilefield>
-												<customtextfield customfield="field" ng-if="field.ControlType == 'Text' && field.DisplayToUser"></customtextfield>
-												<customselectionfield customfield="field" ng-if="field.ControlType == 'Selection' && field.DisplayToUser"></customselectionfield>
-											</div>
-										</div>
-									</div>
-									<div class="panel-footer text-center">
-										<input class="btn btn-default" type="submit" ng-disabled="user_form.$invalid" id="451_btn_user" value="{{(user.Type == 'TempCustomer' ? 'Create Account' : 'Save') | xlat}}" />
-										<span class="alert alert-success" ng-show="actionMessage" ng-bind-html="actionMessage | r | xlat"></span>
+											</ul>
+										</span>
 									</div>
 								</div>
-							</form>
+								<div class="panel-body" >
+									<div ng-if="user.CustomFields" class="col-sm-6 view-form-icon">
+										<div ng-repeat="field in user.CustomFields">
+											<customfilefield customfield="field" ng-if="field.ControlType == 'File' && field.DisplayToUser"></customfilefield>
+											<customtextfield customfield="field" ng-if="field.ControlType == 'Text' && field.DisplayToUser"></customtextfield>
+											<customselectionfield customfield="field" ng-if="field.ControlType == 'Selection' && field.DisplayToUser"></customselectionfield>
+										</div>
+									</div>
+								</div>
+								<div class="panel-footer text-center">
+									<input class="btn btn-default" type="submit" ng-disabled="user_form.$invalid" id="451_btn_user" value="{{(user.Type == 'TempCustomer' ? 'Create Account' : 'Save') | xlat}}" />
+									<span class="alert alert-success" ng-show="actionMessage" ng-bind-html="actionMessage | r | xlat"></span>
+								</div>
+							</div>
+						</form>
 					</section>
 				</div> <!-- main end -->
 			</div> <!-- row end -->
