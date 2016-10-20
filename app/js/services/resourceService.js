@@ -2,7 +2,8 @@ four51.app.factory('Resources', function() {
     var _dropKey = "YNc05lVbvlAAAAAAAAAADUW5TRULsnhuSqrZsQiOKsDIgu6RpHncoT0VrB0l1ld4";
 	
 	var countries = [
-        { "label": "United States of America", "value": "US"},
+        { "label": "United Kingdom", "value": "GB"},
+		{ "label": "United States of America", "value": "US"},
         { "label": "Afghanistan", "value": "AF"},
         { "label": "Åland Islands", "value": "AX"},
         { "label": "Albania", "value": "AL"},
@@ -230,7 +231,6 @@ four51.app.factory('Resources', function() {
         { "label": "Tuvalu", "value": "TU"},
         { "label": "Uganda", "value": "UG"},
         { "label": "Ukraine", "value": "UA"},
-        { "label": "United Kingdom", "value": "GB"},
         { "label": "United Arab Emirates", "value": "AE"},
         { "label": "US Minor Outlying Is.", "value": "UM"},
         { "label": "Uruguay", "value": "UY"},
