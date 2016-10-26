@@ -9,7 +9,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 
     $scope.selected = 1;
     $scope.LineItem = {};
-	$scope.addToOrderText = "Add To Cart";
+	$scope.addToOrderText = "Add To Order";
 	$scope.loadingIndicator = true;
 	$scope.loadingImage = true;
 	$scope.searchTerm = null;
