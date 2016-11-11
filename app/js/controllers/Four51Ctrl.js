@@ -50,6 +50,14 @@ function ($scope, $route, $location, $451, User, Order, Security, OrderConfig, C
 				$scope.$broadcast("treeComplete", data);
 			});
 		}
+		
+		$("#owl-demo").owlCarousel({
+			navigation : true,
+			slideSpeed : 300,
+			paginationSpeed : 400,
+			singleItem:true
+		});
+
 	}
 
 	try {
