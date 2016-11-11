@@ -52,10 +52,11 @@ function ($scope, $route, $location, $451, User, Order, Security, OrderConfig, C
 		}
 		
 		$("#owl-demo").owlCarousel({
-			navigation : true,
+			autoPlay : 5000,
+			navigation : false,
 			slideSpeed : 300,
 			paginationSpeed : 400,
-			singleItem:true
+			singleItem : true
 		});
 
 	}
