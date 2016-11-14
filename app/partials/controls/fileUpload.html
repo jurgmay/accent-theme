@@ -12,7 +12,7 @@
         <input name="replace" class="replace" type="checkbox" ng-model="replace"></input> {{'Replace' | r | xlat}}
         <input name="delete" class="delete" type="checkbox"></input> {{'Delete' | r | xlat}}
     </div>
-    <div ng-show="replace || !customfield.File" ng-class="{'file-upload-required text-danger': customfield.Required }" class="btn btn-primary mt-0 mb-10" style="width: 100%>
+    <div ng-show="replace || !customfield.File" ng-class="{'file-upload-required text-danger': customfield.Required }" class="btn btn-primary mt-0 mb-10" style="width: 100%">
         <input name="upload" class="upload" type="file" style="width: 100%"></input>
     </div>
     <input type="hidden" ng-required="customfield.Required" ng-model="customfield.File.ID"></input>
