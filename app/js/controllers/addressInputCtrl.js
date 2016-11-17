@@ -47,7 +47,7 @@ function ($scope, $rootScope, $location, User, Address, Resources) {
         if (newval != oldval){
             $scope.address.IsShipping   ? (tempShipping = true) : '';
             $scope.address.IsBilling    ? (tempBilling = true)  : '';
-            $scope.address = {'Country':"GB"};
+            $scope.address = {'Country':'GB'};
             tempShipping    ? $scope.address.IsShipping = tempShipping  : '';
             tempBilling     ? $scope.address.IsBilling  = tempBilling   : '';
             streetComplete  = null;
