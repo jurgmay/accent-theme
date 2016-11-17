@@ -17,7 +17,7 @@ four51.app.directive('ordershipping', ['Order', 'Shipper', 'Address', 'AddressLi
 					}
 				}
 			});
-			$scope.shipaddress = { Country: 'US', IsShipping: true, IsBilling: false };
+			$scope.shipaddress = { Country: 'GB', IsShipping: true, IsBilling: false };
 			$scope.$on('event:AddressCancel', function() {
 				$scope.shipaddressform = false;
 			});
@@ -36,7 +36,7 @@ four51.app.directive('ordershipping', ['Order', 'Shipper', 'Address', 'AddressLi
 						$scope.shipaddresses.push($scope.currentOrder.BillAddress);
 					}
 				});
-				$scope.shipaddress = { Country: 'US', IsShipping: true, IsBilling: false };
+				$scope.shipaddress = { Country: 'GB', IsShipping: true, IsBilling: false };
 			});
 
 			var saveChanges = function(callback, error) {

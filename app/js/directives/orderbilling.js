@@ -17,7 +17,7 @@ four51.app.directive('orderbilling', ['Address', 'AddressList', function(Address
 					}
 				}
 			});
-			$scope.billaddress = { Country: 'US', IsShipping: false, IsBilling: true };
+			$scope.billaddress = { Country: 'GB', IsShipping: false, IsBilling: true };
 
 			$scope.$on('event:AddressSaved', function(event, address) {
 				if (address.IsBilling) {
@@ -31,7 +31,7 @@ four51.app.directive('orderbilling', ['Address', 'AddressList', function(Address
 						$scope.billaddresses.push($scope.currentOrder.BillAddress);
 					}
 				});
-				$scope.billaddress = { Country: 'US', IsShipping: false, IsBilling: true };
+				$scope.billaddress = { Country: 'GB', IsShipping: false, IsBilling: true };
 			});
 
 			$scope.$watch('currentOrder.BillAddressID', function(newValue) {
