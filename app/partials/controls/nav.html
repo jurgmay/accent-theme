@@ -64,6 +64,12 @@
 													<span class="hidden-xs">{{'Reports' | r | xlat}}</span>
 												</a>
 											</li>
+											<li id="451qa_mesg_link" class="contactus" ng-show="user.Permissions.contains('ViewContactUs')">
+												<a id="451qa_order_link" href="contactus">
+													<i class="fa fa-comments"></i>
+													<span class="hidden-xs">{{'Contact Us' | r | xlat}}</span>
+												</a>
+											</li>
 											<li ng-class="{'active': isActive(['admin', 'addresses', 'address', 'messages', 'message', 'favoriteorders'])}">
 												<a id="451qa_acct_link" href="admin" class="hidden-md hidden-lg">
 													<i class="fa fa-cog"></i>
