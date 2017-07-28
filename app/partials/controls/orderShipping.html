@@ -50,7 +50,6 @@
 												ng-show="user.ShipMethod.ShipperSelectionType == 'UserDropDown'"
 												ng-options="shipper.Name as (shipper.Name + ' ' + (shipper.ShippingRate.Price | currency | xlat)) for shipper in shippers"
 												ng-required="!currentOrder.IsMultipleShip() && user.ShipMethod != null" >
-											<option value=""></option>
 										</select>
 									</div>
                                 </div>
