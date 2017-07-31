@@ -9,7 +9,7 @@
 		<h3 class="mb-5"><a href="{{LineItem.Product.Type == 'Kit' ? 'kit' : 'product'}}/{{LineItem.Product.InteropID}}">{{LineItem.Product.Name}}</a></h3>
         <p ng-bind-html="trustedDescription(LineItem.Product)" ng-show="LineItem.Product.Description" />
 		<div class="elements-list clearfix">
-			<a href="{{LineItem.Product.Type == 'Kit' ? 'kit' : 'product'}}/{{LineItem.Product.InteropID}}" class="btn btn-default btn-animated">{{('Configure' | r) + ' ' + ('Product' | r) | xlat}}<i class="fa fa-pencil-square-o"></i></a>
+			<a href="{{LineItem.Product.Type == 'Kit' ? 'kit' : 'product'}}/{{LineItem.Product.InteropID}}" class="btn btn-default btn-animated">{{('View' | r) + ' ' + ('Product' | r) | xlat}}<i class="fa fa-pencil-square-o"></i></a>
 		</div>
 		
         <section class="hidden-xs hidden-sm">
