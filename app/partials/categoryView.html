@@ -2,12 +2,14 @@
 
 <!-- breadcrumb start -->
 <!-- ================ -->
-<div class="breadcrumb-container">
-	<div class="container">
-		<ol class="breadcrumb">
-			<li><i class="fa fa-home pr-10"></i><a href="index.html">Home</a></li>
-			<li>{{currentCategory.Name}}</li>
-		</ol>
+<div ng-hide="isActive('catalog')">
+	<div class="breadcrumb-container">
+		<div class="container">
+			<ol class="breadcrumb">
+				<li><i class="fa fa-home pr-10"></i><a href="index.html">Home</a></li>
+				<li>{{currentCategory.Name}}</li>
+			</ol>
+		</div>
 	</div>
 </div>
 <!-- breadcrumb end -->
